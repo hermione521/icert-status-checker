@@ -1,0 +1,8 @@
+{
+	"caseNumber": "I-200-00000-000000",
+	"senderEmail": "sender@email.com",
+	"receiverEmail": "receiver@email.com",
+	"emailSubject": "VISA STATUS UPDATE !!!",
+	"mailgunKey": "key-xxx",
+	"mailgunDomain": "sandbox000.mailgun.org"
+}

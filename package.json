@@ -1,0 +1,25 @@
+{
+	"name": "visa-status-checker",
+	"version": "0.1.0",
+	"description": "Check your visa status on icert.doleta.gov everyday",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"H-1B",
+		"H1B",
+		"visa"
+	],
+	"author": "Hermione <hermione0521@gmail.com> (https://github.com/hermione521/)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hermione521/visa-status-checker.git"
+	},
+	"dependencies": {
+		"node-schedule": "*",
+		"mailgun-js": "*",
+		"request": "*"
+	}
+}
