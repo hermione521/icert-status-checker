@@ -1,6 +1,8 @@
-# Visa Status Checker
+# iCert Status Checker
 
-Write this to check my H-1B visa status everyday.
+*not for visa status checking :(*
+
+Check iCert status everyday.
 
 Previously use nodemailer to send emails, however, gmail always fails. Now use mailgun.
 
