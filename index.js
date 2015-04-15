@@ -19,9 +19,23 @@ var j = schedule.scheduleJob('0 0 0,12 * *', function(){
 		else {
 			// read old result
 			var oldResult = JSON.parse(fs.readFileSync("result.json", "utf8"));
-			var oldRows = oldResult.rows ? oldResult.rows.length : 0;
+			var oldRows = oldResult.rows ? oldResult.rows : [];
 
-			if (body.rows && body.rows.length > oldRows) {
+			var modified = false;
+			if (body.rows) {
+				if (body.rows.length !== oldRows.length) {
+					modified = true;
+				} else {
+					for (var i = oldRows.length - 1; i >= 0; i--) {
+						if (oldRows[i].toString() !== body.rows[i].toString()) {
+							modified = true;
+							break;
+						}
+					};
+				}
+			}
+
+			if (modified) {
 				console.log("visa status updated! " + new Date().toISOString());
 
 				// update old result
